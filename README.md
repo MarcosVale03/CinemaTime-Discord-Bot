@@ -3,8 +3,8 @@ Cinema Time is a discord bot that integrates the Letterboxd application to carry
 
 Letterboxd - 
 
-The bot uses a python library known as Beautiful Soup for webscraping capabilities. By parsing HTML code
-from the website, the bot can display information for the user depending on their input.
+  The bot uses a python library known as Beautiful Soup for webscraping capabilities. By parsing HTML code
+  from the website, the bot can display information for the user depending on their input.
 
 As of now, there are two working commands:
 

@@ -55,7 +55,7 @@ def main(token):
         message = "Movies on Homepage:\n\n"
 
         for titles in film_titles:
-            message += f"\n{titles}"
+            message += f```"\n{titles}```"
 
         # Send the message to the Discord channel
         await ctx.send(message)

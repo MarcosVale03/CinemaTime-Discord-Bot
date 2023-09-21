@@ -166,8 +166,47 @@ def main(token):
         soup = parse_html(url)
 
         # Getting top 5 movies of ALL TIME
+        # I believe I need JavaScript for this specific command, will get back to it later.
         
+    @bot.command()
+    async def userfav(ctx):
 
+        response = '```Enter a Letterboxd username to get their four favorite films!```'
+        await ctx.send(response)
+
+        def check(message):
+            return message.author == ctx.author and message.channel == ctx.channel
+
+        response = await bot.wait_for("message", check=check)
+
+        search = response.content
+
+        soup = parse_html(f'https://letterboxd.com/{search}/')
+        # I could add another search aspect where it gets the top user if the input is a common username
+
+        # Finding the users favorite films
+        fav_films = soup.find_all("li", class_='poster-container')
+        movie_names = []
+        for li in fav_films:
+            # Find the img tag and extract the "alt" attribute
+            img_tag = li.find('img')
+            if img_tag:
+                movie_name = img_tag.get('alt')
+                movie_names.append(movie_name)
+
+        message = f"```{search}'s favorite movies: "
+        count = 0
+        for i in movie_names:
+            count += 1
+            if count == 4:
+                message += i
+                break
+            elif count == 5:
+                break
+            else:
+                message += i + ', '
+
+        await ctx.send(message + '```')
 
     bot.run(token)
 

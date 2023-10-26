@@ -12,6 +12,8 @@ from the website, the bot can display information for the user depending on thei
 
    `!userfav` - Prompts user to input a Letterboxd username and displays that users four favorite films. 
 
+   `!activity` - Shows a Letterboxd users recent activity (when user watches, rates a movie, add a movie to their planning, etc.).
+
 
 **In progress:**
 
@@ -22,6 +24,8 @@ from the website, the bot can display information for the user depending on thei
 
   `Recommendation` - Allows user to input a movie they like so the bot can display movies similar to it based on genre.
 
+  `Combine Letterboxd User commands` - I want to implement a menu where the user can choose what to do after entering a Letterboxd username. Since
+  I will have 2 or 3 commands using a Letterboxd users profile, I can combine them into a cleaner command
 
-  `User activity` - Shows a Letterboxd users recent activity (when user watches, rates a movie, add a movie to their planning, etc.).
-  
+  `General Ideas` - I want to clean up the program a bit. It is messy and a little inconsistent. I want to see how I could add some classes in here to clean it up
+  and more functions to save space and clean up the program. I could add some files as well.

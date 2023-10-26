@@ -12,7 +12,7 @@ from the website, the bot can display information for the user depending on thei
 
    `!userfav` - Prompts user to input a Letterboxd username and displays that users four favorite films. 
 
-   `!activity` - Shows a Letterboxd users recent activity (when user watches, rates a movie, add a movie to their planning, etc.).
+   `!activity` - Displays a Letterboxd users recent activity.
 
 
 **In progress:**
